@@ -100,8 +100,12 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="index" startnode="127" creator="Twine" creator-version="2.3.8" ifid="3589F4F1-46ED-48B1-A217-CB3F4A3382C6" zoom="0.6" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Mountains+of+Christmas:wght@700&family=Special+Elite&display=swap');
-
+	<tw-storydata name="index" startnode="128" creator="Twine" creator-version="2.3.8" ifid="3589F4F1-46ED-48B1-A217-CB3F4A3382C6" zoom="0.6" format="SugarCube" format-version="2.31.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@1,700&family=Mountains+of+Christmas:wght@700&family=Special+Elite&display=swap');
+#name{
+	font-family: 'Mountains of Christmas', cursive;
+	font-size: 120px;
+	color: black;
+}
 #c_o_l {
  	font-family: 'Mountains of Christmas', cursive;
 	font-size: 120px;
@@ -109,13 +113,12 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 }
 .c_o_l {
  	font-family: 'Mountains of Christmas', cursive;
-	font-size: 80px;
+	font-size: 40px;
 	color: white;
 }
-
 #tagline{
 	font-family: 'Special Elite', cursive;
-  font-size: 40px;
+  font-size: 20px;
 	color: white;
 }
 #para{
@@ -153,10 +156,7 @@ font-weight:bold;
 font-family:Verdana;
 font-size:20px;
 }
-body {
-	background: black;
-  	background-size: 100%;
-}
+
 
 .dot {
 	height: 12px;
@@ -238,64 +238,139 @@ input[type=text] {
   	transition-duration: 400ms;
 }
 
+@-webkit-keyframes fade-in-out {
+	0%,
+	to {opacity: 0}
+	50% {opacity: 1}
+}
+@keyframes fade-in-out {
+	0%,
+	to {opacity: 0}
+	50% {opacity: 1}
+}
+.fade-in-out {
+	text-decoration: none;
+	animation: fade-in-out 2s ease-in-out infinite alternate;
+	-webkit-animation: fade-in-out 2s ease-in-out infinite alternate;
+}
 
+@-webkit-keyframes rumble {
+	50% {
+		-webkit-transform: translateY(-.2em);
+		transform: translateY(-.2em)
+	}
+}
+@keyframes rumble {
+	50% {
+		-webkit-transform: translateY(-.2em);
+		transform: translateY(-.2em)
+	}
+}
+.rumble {
+	-webkit-animation: rumble linear 0.1s 0s infinite;
+	animation: rumble linear 0.1s 0s infinite;
+	display:inline-block;
+}
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Beginning" tags="" position="249,262.00000000000006" size="100,100">&lt;div class=&quot;c_o_l&quot;&gt;Hello there!!!&lt;/div&gt;
-&lt;div id=&quot;para&quot;&gt;Welcome to Chose or Lose. Before you start, do a quick registration&lt;/div&gt;
-&lt;a href=&quot;https://forms.gle/zEeV7GUL9JKmmVgW9&quot; target=&quot;_blank&quot;&gt;&lt;div class=&quot;para&quot;&gt;Registration&lt;/div&gt;&lt;/a&gt;
-&lt;&lt;timed 5s t8n&gt;&gt;
-&lt;div class=&quot;slowfade inst&quot;&gt;[[Story Begin|Disclaimer]]&lt;/div&gt;
-&lt;&lt;/timed&gt;&gt;
+@-webkit-keyframes shudder {
+	50% {
+		-webkit-transform: translateX(0.2em);
+		transform: translateX(0.2em)
+	}
+}
+@keyframes shudder {
+	50% {
+		-webkit-transform: translateX(0.2em);
+		transform: translateX(0.2em)
+	}
+}
+.shudder {
+	-webkit-animation: shudder linear 0.1s 0s infinite;
+	animation: shudder linear 0.1s 0s infinite;
+	display: inline-block;
+}
+body {
+	background: black;
+  	background-size: 100%;
+}
+.wrapper { 
+  position: absolute;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
 
-</tw-passagedata><tw-passagedata pid="2" name="Disclaimer" tags="" position="273,36" size="100,100">&lt;h1&gt;DISCLAIMER!!!&lt;/h1&gt;
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="ccolor" color="purple"></tw-tag><tw-passagedata pid="1" name="Disclaimer" tags="" position="271.3333333333333,36" size="100,100">&lt;h1&gt;DISCLAIMER!!!&lt;/h1&gt;
 &lt;div id=&quot;para&quot;&gt;This is the work of fiction. Names, chraracters, businesses, places, events, locales and incidents are either the products of the author&#39;s imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|instructions]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="instructions" tags="" position="540,11" size="100,100">&lt;h1&gt;INSTRUCTIONS&lt;/h1&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|instructions]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="2" name="instructions" tags="" position="538.3333333333334,11" size="100,100">&lt;h1&gt;INSTRUCTIONS&lt;/h1&gt;
 &lt;div id=&quot;para&quot;&gt;&lt;ul&gt;&lt;li&gt;This is online text based interactive game in which the choices made by the player will effect the end of the story.&lt;/li&gt;&lt;li&gt;Wrong choices will have consequences, so think before you choose.&lt;/li&gt;&lt;li&gt;Do not terminate the application or you would have to start from the beginning.&lt;/li&gt;&lt;li&gt;Read the story carefully and proceed with caution.&lt;/li&gt;&lt;li&gt;At a random point in the story you will be shown pics and asked to do something.&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Here is an example|eimage]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Skip it, i&#39;m in hurry|character]]&lt;/div&gt;
 &lt;&lt;set $story2 = false&gt;&gt;
-&lt;&lt;set $story1 = false&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="u ok with the character?" tags="" position="1239,615" size="100,100">&lt;div class=&quot;para&quot;&gt;Satisfied with the character?&lt;/div&gt;
+&lt;&lt;set $story1 = false&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="u ok with the character?" tags="" position="1239,615" size="100,100">&lt;div class=&quot;para&quot;&gt;Satisfied with the character?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Change Character|character]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Yes, continue|island image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="hide and seek" tags="" position="1258,1020" size="100,100">&lt;div class=&quot;para&quot;&gt;You arrive at your destination and just like any other group, you decide to play a game.
+&lt;div class=&quot;move&quot;&gt;[[Yes, continue|island image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="hide and seek" tags="" position="1258,1020" size="100,100">&lt;div class=&quot;para&quot;&gt;You arrive at your destination and just like any other group, you decide to play a game.
 
 HIDE and SEEK!!
 
 What would you like to do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[HIDE|iimage]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[SEEK|seek]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="character" tags="" position="1227,154" size="100,100">&lt;h1&gt;Chose a character&lt;/h1&gt;
+&lt;div class=&quot;move&quot;&gt;[[SEEK|seek]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="character" tags="" position="1225.3333333333333,154" size="100,100">&lt;h1&gt;Chose a character&lt;/h1&gt;
 &lt;div class=&quot;move&quot;&gt;[[Archie|sawan]]&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Joey|pra]]&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Veronica|vaish]]&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Jughead|dar]]&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Tony|shiv]]&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Betty|spoo]]&lt;/div&gt;
-&lt;&lt;set $frnd=0&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="sawan" tags="" position="907,361" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Arhie is very brave. He doesn&#39;t hesitate to do the right things no matter how scary they seem.&lt;/div&gt;
+&lt;&lt;set $frnd=0&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="sawan" tags="" position="907,361" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Arhie is very brave. He doesn&#39;t hesitate to do the right things no matter how scary they seem.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|u ok with the character?]]&lt;/div&gt;
-&lt;&lt;set $frnd=1&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="pra" tags="" position="1048,364" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Joey is clever. He thinks a lot and makes decisions that seem appropriate  at that time.&lt;/div&gt;
+&lt;&lt;set $frnd=1&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="pra" tags="" position="1048,364" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Joey is clever. He thinks a lot and makes decisions that seem appropriate  at that time.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|u ok with the character?]]&lt;/div&gt; 
-&lt;&lt;set $frnd=2&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="vaish" tags="" position="1185,365" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Veronica is afraid of many things. Though she chicken&#39;s out most of the times. She always has her friends back.&lt;/div&gt;
+&lt;&lt;set $frnd=2&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="vaish" tags="" position="1185,365" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Veronica is afraid of many things. Though she chicken&#39;s out most of the times. She always has her friends back.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|u ok with the character?]]&lt;/div&gt;
-&lt;&lt;set $frnd=3&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="dar" tags="" position="1326,366" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Jughead is very intuitive. He does whats he thinks is right. This gets him in trouble most of the times.&lt;/div&gt;
+&lt;&lt;set $frnd=3&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="dar" tags="" position="1326,366" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Jughead is very intuitive. He does whats he thinks is right. This gets him in trouble most of the times.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|u ok with the character?]]&lt;/div&gt;
-&lt;&lt;set $frnd=4&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="shiv" tags="" position="1450,363" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Tony is very down to earth. He always helps people who are in need, but ends up getting used by others.&lt;/div&gt;
+&lt;&lt;set $frnd=4&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="shiv" tags="" position="1450,363" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Tony is very down to earth. He always helps people who are in need, but ends up getting used by others.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|u ok with the character?]]&lt;/div&gt;
-&lt;&lt;set $frnd=5&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="spoo" tags="" position="1601,363" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Betty is a simpleton. She believes in following rules and is uptight most of the times.&lt;/div&gt;
+&lt;&lt;set $frnd=5&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="spoo" tags="" position="1601,363" size="100,100">&lt;div class=&quot;para&quot;&gt;Your character Betty is a simpleton. She believes in following rules and is uptight most of the times.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|u ok with the character?]]&lt;/div&gt;
-&lt;&lt;set $frnd=6&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="hide" tags="" position="748,675" size="100,100">&lt;div class=&quot;para&quot;&gt;Where do you chose to hide?&lt;/div&gt;
+&lt;&lt;set $frnd=6&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="hide" tags="" position="748,675" size="100,100">&lt;div class=&quot;para&quot;&gt;Where do you chose to hide?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Hide in the bushes|bushes images2]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Hide in a nearby abandoned bunglow|hnoise1]]&lt;/div&gt;
 &lt;&lt;set $kit1 = false&gt;&gt;
 &lt;&lt;set $base1 = false&gt;&gt;
-&lt;&lt;set $story1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="seek" tags="" position="1774,765" size="100,100">&lt;div class=&quot;para&quot;&gt;So you start searching for your friends. It&#39;s been 1 hour but you still haven&#39;t found anyone. What&#39;s your next step?&lt;/div&gt;
+&lt;&lt;set $story1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="seek" tags="" position="1774,765" size="100,100">&lt;div class=&quot;para&quot;&gt;So you start searching for your friends. It&#39;s been 1 hour but you still haven&#39;t found anyone. What&#39;s your next step?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[continue searching|search]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[start shouting|shout]]&lt;/div&gt;
 
-&lt;&lt;set $call = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="search" tags="" position="2023,925" size="100,100">&lt;div class=&quot;para&quot;&gt;Its been 3 hours since you last saw them. You searched all the possible places they could have hide at. You&#39;re worried that they might be missing and are concerned about their safety now.
+&lt;&lt;set $call = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="search" tags="" position="2023,925" size="100,100">&lt;div class=&quot;para&quot;&gt;Its been 3 hours since you last saw them. You searched all the possible places they could have hide at. You&#39;re worried that they might be missing and are concerned about their safety now.
 
 What will you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[call you friends|call friend]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[call police|call police]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="shout" tags="" position="1643,949" size="100,100">&lt;div class=&quot;para&quot;&gt;Its been 3 hours since you last saw them. You tried shouting their names but no one responding. You&#39;re worried that they might be missing and are concerned about their safety now.
+&lt;div class=&quot;move&quot;&gt;[[call police|call police]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="shout" tags="" position="1643,949" size="100,100">&lt;div class=&quot;para&quot;&gt;Its been 3 hours since you last saw them. You tried shouting their names but no one responding. You&#39;re worried that they might be missing and are concerned about their safety now.
 
 What will you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[call you friends|call friend]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[call police|call police]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="call police" tags="" position="2029,1148" size="100,100">&lt;&lt;audio not_reachable play&gt;&gt;
+&lt;div class=&quot;move&quot;&gt;[[call police|call police]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="call police" tags="" position="2029,1148" size="100,100">&lt;&lt;audio not_reachable play&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;You call the police and try to explain the situation, but you couldn&#39;t hear anything due to improper network.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Call your friends|callfriends2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="call friend" tags="" position="1640,1135" size="100,100">&lt;div class=&quot;head2&quot;&gt;Whom will you call?&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Call your friends|callfriends2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="call friend" tags="" position="1640,1135" size="100,100">&lt;div class=&quot;head2&quot;&gt;Whom will you call?&lt;/div&gt;
 &lt;&lt;if $frnd==1&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Joey|call1]] [[Veronica|call1]] [[Jughead|call1]] [[Tony|call1]] [[Betty|call1]]&lt;/div&gt;
 &lt;&lt;elseif $frnd==2&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call1]] [[Veronica|call1]] [[Jughead|call1]] [[Tony|call1]] [[Betty|call1]]&lt;/div&gt;
 &lt;&lt;elseif $frnd==3&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call1]] [[Joey|call1]] [[Jughead|call1]] [[Tony|call1]] [[Betty|call1]]&lt;/div&gt;
@@ -303,7 +378,7 @@ What will you do?&lt;/div&gt;
 &lt;&lt;elseif $frnd==5&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call1]] [[Joey|call1]] [[Veronica|call1]] [[Jughead|call1]] [[Betty|call1]]&lt;/div&gt;
 &lt;&lt;else&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call1]] [[Joey|call1]] [[Veronica|call1]] [[Jughead|call1]] [[Tony|call1]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="call1" tags="" position="1467,1243" size="100,100">&lt;&lt;if $call &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
+&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="call1" tags="" position="1467,1243" size="100,100">&lt;&lt;if $call &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|call friend]]&lt;/div&gt;
 &lt;&lt;elseif $call == 1&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of sevice. Also your mobile battery is very less.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|call friend]]&lt;/div&gt;
@@ -315,24 +390,24 @@ What will you do?&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
 &lt;&lt;audio ringtone stop&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="call2" tags="" position="1355,1415" size="100,100">&lt;div class=&quot;para&quot;&gt;You call the police and try to explain the situation, but you couldn&#39;t hear anything due to improper network. It&#39;s evening already and you are tired of all the searching. You sit under a tree to take some rest.&lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="call2" tags="" position="1355,1415" size="100,100">&lt;div class=&quot;para&quot;&gt;You call the police and try to explain the situation, but you couldn&#39;t hear anything due to improper network. It&#39;s evening already and you are tired of all the searching. You sit under a tree to take some rest.&lt;/div&gt;
 &lt;div class=&quot;head&quot;&gt;SUDDENLY!!&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|Suddenly]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="New call" tags="" position="1724,1357" size="100,100">&lt;div class=&quot;para&quot;&gt;You try to call your friend, but your mobile gets switched off due to low battery.Sou you start searching the place where the sound stopped.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|Suddenly]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="20" name="New call" tags="" position="1724,1357" size="100,100">&lt;div class=&quot;para&quot;&gt;You try to call your friend, but your mobile gets switched off due to low battery.Sou you start searching the place where the sound stopped.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Search|Bunglow image]]&lt;/div&gt;
-&lt;&lt;audio ringtone stop&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Bunglow image" tags="" position="1789,1618" size="100,100">&lt;div class=&quot;head&quot;&gt;An old bunglow!!!!&lt;/div&gt;
+&lt;&lt;audio ringtone stop&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Bunglow image" tags="" position="1789,1618" size="100,100">&lt;div class=&quot;head&quot;&gt;An old bunglow!!!!&lt;/div&gt;
 &lt;img src=&quot;images/bunglow.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;para&quot;&gt;All your searching has lead you to an old abandoned bunglow. The bunglow looks pretty scary from the outside.
 
 What will you do, Will you dare to enter the bunglow?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[YES|yes]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[NO|no]]&lt;/div&gt;
-&lt;&lt;audio ringtone stop&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="Suddenly" tags="" position="1370,1621" size="100,100">&lt;&lt;audio ringtone play&gt;&gt;&lt;div class=&quot;para&quot;&gt;You hear your friend&#39;s mobile ringtone. You start running towards the sound. While you&#39;re running ,the sound stops.
+&lt;&lt;audio ringtone stop&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Suddenly" tags="" position="1370,1621" size="100,100">&lt;&lt;audio ringtone play&gt;&gt;&lt;div class=&quot;para&quot;&gt;You hear your friend&#39;s mobile ringtone. You start running towards the sound. While you&#39;re running ,the sound stops.
 What will you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Try calling your friend again.|New call]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Search the place where the sound stopped.|Bunglow image]]&lt;/div&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
 &lt;&lt;audio ringtone stop&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="callfriends2" tags="" position="2022,1313" size="100,100">&lt;div class=&quot;head2&quot;&gt;Whom will you call?&lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="23" name="callfriends2" tags="" position="2022,1313" size="100,100">&lt;div class=&quot;head2&quot;&gt;Whom will you call?&lt;/div&gt;
 &lt;&lt;if $frnd==1&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Joey|call3]] [[Veronica|call3]] [[Jughead|call3]] [[Tony|call3]] [[Betty|call3]]&lt;/div&gt;
 &lt;&lt;elseif $frnd==2&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call3]] [[Veronica|call3]] [[Jughead|call3]] [[Tony|call3]] [[Betty|call3]]&lt;/div&gt;
 &lt;&lt;elseif $frnd==3&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call3]] [[Joey|call3]] [[Jughead|call3]] [[Tony|call3]] [[Betty|call3]]&lt;/div&gt;
@@ -340,7 +415,7 @@ What will you do?&lt;/div&gt;
 &lt;&lt;elseif $frnd==5&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call3]] [[Joey|call3]] [[Veronica|call3]] [[Jughead|call3]] [[Betty|call3]]&lt;/div&gt;
 &lt;&lt;else&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call3]] [[Joey|call3]] [[Veronica|call3]] [[Jughead|call3]] [[Tony|call3]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="call3" tags="" position="2021,1463" size="100,100">&lt;&lt;if $call &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
+&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="call3" tags="" position="2021,1463" size="100,100">&lt;&lt;if $call &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|callfriends2]]&lt;/div&gt;
 &lt;&lt;elseif $call == 1&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service. Also your mobile battery is very less.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|callfriends2]]&lt;/div&gt;
@@ -351,67 +426,67 @@ What will you do?&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;timed 5s t8n&gt;&gt;
 &lt;&lt;audio ringtone stop&gt;&gt;
-&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="26" name="yes" tags="" position="1920,1798" size="100,100">&lt;div class=&quot;para&quot;&gt;While you are about to enter the bunglow, you hear a loud scream from the terrace of the bunglow.&lt;/div&gt;&lt;div class=&quot;head&quot;&gt;Oh no!!&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;You see your friend falling from the terrace.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Conitnue|6image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="no" tags="" position="1525,1733" size="100,100">&lt;div class=&quot;para&quot;&gt;You hear some noises from the bunglow. Yes, it&#39;s your friends. From their voices its clear that they are in some trouble. Will you enter the bunglow now?&lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="25" name="yes" tags="" position="1920,1798" size="100,100">&lt;div class=&quot;para&quot;&gt;While you are about to enter the bunglow, you hear a loud scream from the terrace of the bunglow.&lt;/div&gt;&lt;div class=&quot;head&quot;&gt;Oh no!!&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;You see your friend falling from the terrace.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Conitnue|6image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="no" tags="" position="1525,1733" size="100,100">&lt;div class=&quot;para&quot;&gt;You hear some noises from the bunglow. Yes, it&#39;s your friends. From their voices its clear that they are in some trouble. Will you enter the bunglow now?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[YES|yes]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[NO, i&#39;m scared|friendfall]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="friendfall" tags="" position="1261,1793" size="100,100">&lt;div class=&quot;para&quot;&gt;While you are really scared to enter the bunglow, you hear a loud voice from the terrace of the bunglow.&lt;/div&gt;&lt;div class=&quot;head&quot;&gt;Oh no!!&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;You see your friend falling from the terrace.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Conitnue|6image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="fall" tags="" position="1529,2192" size="100,100">&lt;div class=&quot;para&quot;&gt;Your friend fell down and he&#39;s seriously injured. While you&#39;re trying to help him, you noitce a creepy creature on the terrace watching you. You try to speak with your friend, but he is unable to speak as he is in heavy pain. When you asked about others, your friend points his finger towards the bunglow.
+&lt;div class=&quot;move&quot;&gt;[[NO, i&#39;m scared|friendfall]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="27" name="friendfall" tags="" position="1261,1793" size="100,100">&lt;div class=&quot;para&quot;&gt;While you are really scared to enter the bunglow, you hear a loud voice from the terrace of the bunglow.&lt;/div&gt;&lt;div class=&quot;head&quot;&gt;Oh no!!&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;You see your friend falling from the terrace.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Conitnue|6image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="fall" tags="" position="1529,2192" size="100,100">&lt;div class=&quot;para&quot;&gt;Your friend fell down and he&#39;s seriously injured. While you&#39;re trying to help him, you noitce a creepy creature on the terrace watching you. You try to speak with your friend, but he is unable to speak as he is in heavy pain. When you asked about others, your friend points his finger towards the bunglow.
 
 What will you do now?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Ask him for his mobile to call police|mobile broke image]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Enter into the bunglow|Bunglow]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="mobile broke image" tags="" position="1286,2070" size="100,100">&lt;img src=&quot;images/mobile.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Enter into the bunglow|Bunglow]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="mobile broke image" tags="" position="1286,2070" size="100,100">&lt;img src=&quot;images/mobile.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;para&quot;&gt;Unfortunately his mobile is broken when he fell from the terrace. You hear screams and cries for help. Your friends are in trouble.
 
 Will you enter the enter the bunglow to save them or will both of you escape from there, fearing the creepy creature.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Escape from there|escape]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Enter the bunglow|Bunglow]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="Bunglow" tags="" position="1857,2168" size="100,100">&lt;div class=&quot;para&quot;&gt;You are about to enter the bunglow and suddenly yor friends falls unconscious. You can&#39;t take him with you.
+&lt;div class=&quot;move&quot;&gt;[[Enter the bunglow|Bunglow]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="30" name="Bunglow" tags="" position="1857,2168" size="100,100">&lt;div class=&quot;para&quot;&gt;You are about to enter the bunglow and suddenly yor friends falls unconscious. You can&#39;t take him with you.
 
 What will you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Leave him there|enter]] and enter the bunglow&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Hide him somewhere|bushes images]] and enter the bunglow&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="escape" tags="" position="1179,2323" size="100,100">&lt;div class=&quot;para&quot;&gt;You and your injured friend start running away from there. Suddenly you hear some sounds approaching towards you. It&#39;s the creepy creature. Suddenly your friend falls unconscious. You can&#39;t take him with you.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|bushes images]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="enter" tags="" position="2063,2335" size="100,100">&lt;div class=&quot;para&quot;&gt;Do you think leaving him alone outside alone is a good idea? He&#39;s already injured and what if the creepy creature attacks him again?&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Hide him|escape2]] and enter the bunglow&lt;/div&gt;</tw-passagedata><tw-passagedata pid="34" name="bushes images" tags="" position="1650,2326" size="100,100">&lt;div class=&quot;para&quot;&gt;As you assumed before, it&#39;s not a creature. It&#39;s a man livinig in the abandoned island, wihtout any contact with the outside world.
+&lt;div class=&quot;move&quot;&gt;[[Hide him somewhere|bushes images]] and enter the bunglow&lt;/div&gt;</tw-passagedata><tw-passagedata pid="31" name="escape" tags="" position="1179,2323" size="100,100">&lt;div class=&quot;para&quot;&gt;You and your injured friend start running away from there. Suddenly you hear some sounds approaching towards you. It&#39;s the creepy creature. Suddenly your friend falls unconscious. You can&#39;t take him with you.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|bushes images]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="enter" tags="" position="2063,2335" size="100,100">&lt;div class=&quot;para&quot;&gt;Do you think leaving him alone outside alone is a good idea? He&#39;s already injured and what if the creepy creature attacks him again?&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Hide him|escape2]] and enter the bunglow&lt;/div&gt;</tw-passagedata><tw-passagedata pid="33" name="bushes images" tags="" position="1650,2326" size="100,100">&lt;div class=&quot;para&quot;&gt;As you assumed before, it&#39;s not a creature. It&#39;s a man livinig in the abandoned island, wihtout any contact with the outside world.
 
 What will be your next step?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Both of you hide|hidebush]] in the bushes and stay silent.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Hide him in the bushes|hidebush2]] and grab a stone for self defence.&lt;/div&gt;
-&lt;img src=&quot;images/bushes.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;</tw-passagedata><tw-passagedata pid="35" name="hidebush" tags="" position="1443,2473" size="100,100">&lt;div class=&quot;para&quot;&gt;You try to  attack him. But he&#39;s stronger than you. He grabs your stone and is ready to attack you. You have no other option other than running.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[RUN|run]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="hidebush2" tags="" position="1719,2473" size="100,100">&lt;div class=&quot;para&quot;&gt;He couldn&#39;t find you as you are hiding. He went far away serching for both of you. Considering this as chance to save your friends. You run towards the bunglow.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Enter the bunglow|ntr bung]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="escape2" tags="" position="1958,2483" size="100,100">&lt;div class=&quot;para&quot;&gt;While you are hiding your unconscious friend near a bush, the  creature comes outside searching for the both of you.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Conitnue|bushes images]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="38" name="run" tags="" position="1442,2680" size="100,100">&lt;div class=&quot;para&quot;&gt;While he is chasing you, he accidently fells in a well. He is now trapped there. This is your best chance to enter the bunglow and save your friends&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Enter the bunglow|8image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="ntr bung" tags="" position="1725,2626" size="100,100">&lt;div class=&quot;head&quot;&gt;Wait!&lt;/div&gt;
+&lt;img src=&quot;images/bushes.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;</tw-passagedata><tw-passagedata pid="34" name="hidebush" tags="" position="1443,2473" size="100,100">&lt;div class=&quot;para&quot;&gt;You try to  attack him. But he&#39;s stronger than you. He grabs your stone and is ready to attack you. You have no other option other than running.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[RUN|run]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="hidebush2" tags="" position="1719,2473" size="100,100">&lt;div class=&quot;para&quot;&gt;He couldn&#39;t find you as you are hiding. He went far away serching for both of you. Considering this as chance to save your friends. You run towards the bunglow.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Enter the bunglow|ntr bung]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="escape2" tags="" position="1958,2483" size="100,100">&lt;div class=&quot;para&quot;&gt;While you are hiding your unconscious friend near a bush, the  creature comes outside searching for the both of you.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Conitnue|bushes images]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="run" tags="" position="1442,2680" size="100,100">&lt;div class=&quot;para&quot;&gt;While he is chasing you, he accidently fells in a well. He is now trapped there. This is your best chance to enter the bunglow and save your friends&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Enter the bunglow|8image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="38" name="ntr bung" tags="" position="1725,2626" size="100,100">&lt;div class=&quot;head&quot;&gt;Wait!&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;What about your friend who is lying unconscious there.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Try to wake him up|wakehim]], so that both of you can enter the bunglow and rescue others.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Enter the bunglow alone|next1]] since he is in a safe place, in the bushes, where that man can&#39;t see him.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="wakehim" tags="" position="1978,2710" size="100,100">&lt;div class=&quot;para&quot;&gt;Your friend is seriously injured and he won&#39;t wake up anytime soon. You have no other option, but to leave him there and enter the bunglow alone&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Enter the bunglow|next1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="41" name="next1" tags="" position="1734,2770" size="100,100">&lt;div class=&quot;para&quot;&gt;You are entering the bunglow alone, suddenly you could see that creepy man running towards you.
+&lt;div class=&quot;move&quot;&gt;[[Enter the bunglow alone|next1]] since he is in a safe place, in the bushes, where that man can&#39;t see him.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="39" name="wakehim" tags="" position="1978,2710" size="100,100">&lt;div class=&quot;para&quot;&gt;Your friend is seriously injured and he won&#39;t wake up anytime soon. You have no other option, but to leave him there and enter the bunglow alone&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Enter the bunglow|next1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="next1" tags="" position="1734,2770" size="100,100">&lt;div class=&quot;para&quot;&gt;You are entering the bunglow alone, suddenly you could see that creepy man running towards you.
 
 What wil you do now?&lt;/div&gt;
 
 &lt;div class=&quot;move&quot;&gt;[[Run for your life|run]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Grab some stone for self defence|hidebush]] and attack him&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="42" name="next2" tags="" position="1927,2887" size="100,100">&lt;div class=&quot;para&quot;&gt;You start searching for your friends. Its really dark inside and you couldn&#39;t find anyone
+</tw-passagedata><tw-passagedata pid="41" name="next2" tags="" position="1927,2887" size="100,100">&lt;div class=&quot;para&quot;&gt;You start searching for your friends. Its really dark inside and you couldn&#39;t find anyone
 
 Where will you go now?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Basement|basement]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Upstairs|lock image1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="basement" tags="" position="1345,3041" size="100,100">&lt;div class=&quot;para&quot;&gt;The basement is locked. Now you call out to your friends. You hear their shouts coming from upstairs&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Upstairs|lock image1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="lock image1" tags="" position="1885,3059" size="100,100">&lt;div class=&quot;para&quot;&gt;All your friends&#39; voices are coming from a room. The room is locked from outside.
+&lt;div class=&quot;move&quot;&gt;[[Upstairs|lock image1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="42" name="basement" tags="" position="1345,3041" size="100,100">&lt;div class=&quot;para&quot;&gt;The basement is locked. Now you call out to your friends. You hear their shouts coming from upstairs&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Upstairs|lock image1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="43" name="lock image1" tags="" position="1885,3059" size="100,100">&lt;div class=&quot;para&quot;&gt;All your friends&#39; voices are coming from a room. The room is locked from outside.
 &lt;img src=&quot;images/lock.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 What will you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Break the lock|break]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Search for the key|key]]&lt;/div&gt;
-&lt;&lt;set $brlock = 2&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="break" tags="" position="1621,3155" size="100,100">&lt;&lt;if $brlock != 0&gt;&gt;&lt;div class=&quot;para&quot;&gt;It won&#39;t break&lt;/div&gt;
+&lt;&lt;set $brlock = 2&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="break" tags="" position="1621,3155" size="100,100">&lt;&lt;if $brlock != 0&gt;&gt;&lt;div class=&quot;para&quot;&gt;It won&#39;t break&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Try again|break]]&lt;/div&gt;&lt;&lt;remember $brlock -=1&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;audio door_open play&gt;&gt;&lt;div class=&quot;para&quot;&gt;The lock broke!&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Enter|creep image]]&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="key" tags="" position="1960,3209" size="100,100">&lt;div class=&quot;para&quot;&gt;You couldn&#39;t find the key. The creepy man must have taken the key with him. You are running out of time. He won&#39;t be trapped there forever. Try breaking the lock&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Break lock|break]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="creep image" tags="" position="1308,3231" size="100,100">&lt;div class=&quot;para&quot;&gt;You find your friends in the room. All are safe with minor injuries. You don&#39;t want to spend a single minute there. So all of you come down to get out of that place. When you&#39;re about to exit the bunglow, you see that man coming towards the bunglow.&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="key" tags="" position="1960,3209" size="100,100">&lt;div class=&quot;para&quot;&gt;You couldn&#39;t find the key. The creepy man must have taken the key with him. You are running out of time. He won&#39;t be trapped there forever. Try breaking the lock&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Break lock|break]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="46" name="creep image" tags="" position="1308,3231" size="100,100">&lt;div class=&quot;para&quot;&gt;You find your friends in the room. All are safe with minor injuries. You don&#39;t want to spend a single minute there. So all of you come down to get out of that place. When you&#39;re about to exit the bunglow, you see that man coming towards the bunglow.&lt;/div&gt;
 &lt;img src=&quot;images/creep.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
-&lt;div class=&quot;move&quot;&gt;[[Conitnue|7image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="escape3" tags="" position="1397,3455" size="100,100">&lt;div class=&quot;para&quot;&gt;He&#39;s very angry, with a knief shaped stone in hand is running towards you. So where will you hide now?&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Conitnue|7image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="escape3" tags="" position="1397,3455" size="100,100">&lt;div class=&quot;para&quot;&gt;He&#39;s very angry, with a knief shaped stone in hand is running towards you. So where will you hide now?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Hide in basement|basement2]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Hide in the same room|upstairs2]] your friends where locked in.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="49" name="basement2" tags="" position="1340,3727" size="100,100">&lt;div class=&quot;para&quot;&gt;The basement is locked. To enter you have to break the  lock. But do you have that much time?&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Hide in the same room|upstairs2]] your friends where locked in.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="48" name="basement2" tags="" position="1340,3727" size="100,100">&lt;div class=&quot;para&quot;&gt;The basement is locked. To enter you have to break the  lock. But do you have that much time?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Break the lock|brlock2]]&lt;/div&gt;
-&lt;&lt;set $brlock1 = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="upstairs2" tags="" position="2034,3700" size="100,100">&lt;div class=&quot;para&quot;&gt;You run upstairs, enter into the room and lock it from the inside. Now you&#39;re safe from the man. But how will you get out from there?&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Search for something|continue1]] useful in the room&lt;/div&gt;</tw-passagedata><tw-passagedata pid="51" name="brlock2" tags="" position="1673,3605" size="100,100">&lt;&lt;if $brlock1 &gt;= 2&gt;&gt;&lt;div class=&quot;para&quot;&gt;The lock didn&#39;t break.&lt;/div&gt;
+&lt;&lt;set $brlock1 = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="upstairs2" tags="" position="2034,3700" size="100,100">&lt;div class=&quot;para&quot;&gt;You run upstairs, enter into the room and lock it from the inside. Now you&#39;re safe from the man. But how will you get out from there?&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Search for something|continue1]] useful in the room&lt;/div&gt;</tw-passagedata><tw-passagedata pid="50" name="brlock2" tags="" position="1673,3605" size="100,100">&lt;&lt;if $brlock1 &gt;= 2&gt;&gt;&lt;div class=&quot;para&quot;&gt;The lock didn&#39;t break.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Try again|brlock2]]&lt;/div&gt;&lt;&lt;remember $brlock1 -=1&gt;&gt;
 &lt;&lt;elseif $brlock1 == 1 &gt;&gt;&lt;div class=&quot;para&quot;&gt;The lock didn&#39;t break.&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;You are running out of time&lt;/div&gt;
@@ -419,77 +494,77 @@ What will you do?&lt;/div&gt;
 &lt;&lt;else&gt;&gt;&lt;div class=&quot;para&quot;&gt;The lock didn&#39;t break.&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;You are running out of time&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Better hide upstairs|upstairs2]]&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="continue1" tags="" position="1669,3759" size="100,100">&lt;&lt;audio door_bang volume 5 play loop&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="51" name="continue1" tags="" position="1669,3759" size="100,100">&lt;&lt;audio door_bang volume 5 play loop&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;You don&#39;t find anything useful. The man has come upstairs now and is banging the door continuously. Since it&#39;s locked from inside, he isn&#39;t able to enter.&lt;/div&gt;
 &lt;div class=&quot;head2&quot;&gt;You are safe for the time being.&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;But you need to think of a way to get out of here.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|continue2]]&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="53" name="continue2" tags="" position="1296,3964" size="100,100">&lt;div class=&quot;head2&quot;&gt;Wait!!&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="52" name="continue2" tags="" position="1296,3964" size="100,100">&lt;div class=&quot;head2&quot;&gt;Wait!!&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;Your friends have mobiles with them right. What are you waiting for?&lt;/div&gt;
 &lt;div class=&quot;head2&quot;&gt;[[Call the police|continue3]]&lt;/div&gt;
 &lt;&lt;audio door_bang stop&gt;&gt;
-</tw-passagedata><tw-passagedata pid="54" name="continue3" tags="" position="2004,4040" size="100,100">&lt;div class=&quot;para&quot;&gt;None of your friends, know the police number. You know it, but are unable to recall it.&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="53" name="continue3" tags="" position="2004,4040" size="100,100">&lt;div class=&quot;para&quot;&gt;None of your friends, know the police number. You know it, but are unable to recall it.&lt;/div&gt;
 &lt;div class=&quot;head&quot;&gt;could it be??&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;The bushes you hid in was knotweed and because of that you cant recall the police number??&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|spuzzle]]&lt;/div&gt;
 &lt;&lt;set $shint1 = false&gt;&gt;
 &lt;&lt;set $shint2 = false&gt;&gt;
-&lt;&lt;set $shint3 = false&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="bushes images2" tags="" position="589,895" size="100,100">&lt;img src=&quot;images/bushes.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;&lt;set $shint3 = false&gt;&gt;</tw-passagedata><tw-passagedata pid="54" name="bushes images2" tags="" position="589,895" size="100,100">&lt;img src=&quot;images/bushes.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;para&quot;&gt;It has been a while since you are hiding here. Now you hear some footsteps approaching you. It is the seeker.
 What do you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Stay put|hiding image1]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Find another place|hplace]] to hide.&lt;/div&gt;
-&lt;&lt;set $hwait = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="hbunglow" tags="" position="1045,1136" size="100,100">&lt;div class=&quot;para&quot;&gt;You have entered bunglow.&lt;/div&gt;&lt;div class=&quot;head&quot;&gt;It&#39;s huge! It&#39;s creepy! It&#39;s dark inside!&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;Where do you hide?&lt;/div&gt;
+&lt;&lt;set $hwait = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="55" name="hbunglow" tags="" position="1045,1136" size="100,100">&lt;div class=&quot;para&quot;&gt;You have entered bunglow.&lt;/div&gt;&lt;div class=&quot;head&quot;&gt;It&#39;s huge! It&#39;s creepy! It&#39;s dark inside!&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;Where do you hide?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Inside the open closet|hnext]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Behind the sofa in the hall|hnext]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Backyard of the house|hnext]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="57" name="hnext" tags="" position="983,1370" size="100,100">&lt;div class=&quot;para&quot;&gt;It has been a while since you are hiding. You hear weird squealing noises from somewhere around.
+&lt;div class=&quot;move&quot;&gt;[[Backyard of the house|hnext]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="56" name="hnext" tags="" position="983,1370" size="100,100">&lt;div class=&quot;para&quot;&gt;It has been a while since you are hiding. You hear weird squealing noises from somewhere around.
 What do you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Go in search of the noise|hsearch]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call your friends and tell them|hcallf]]&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="58" name="hsearch" tags="" position="735,1710" size="100,100">&lt;div class=&quot;head2&quot;&gt;Where do you search?&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="57" name="hsearch" tags="" position="735,1710" size="100,100">&lt;div class=&quot;head2&quot;&gt;Where do you search?&lt;/div&gt;
 &lt;&lt;if $kit1 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Kitchen|kitchen image]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $base1 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Basement|lock image2]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Upstairs|himage]]&lt;/div&gt;
 &lt;&lt;set $hstore = false&gt;&gt;
 &lt;&lt;set $hr1 = false&gt;&gt;
-&lt;&lt;set $hr2 = false&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="hcallf" tags="" position="680,1292" size="100,100">&lt;div class=&quot;move&quot;&gt;[[All of you go|bungimg1]] to the bunglow&lt;/div&gt;
+&lt;&lt;set $hr2 = false&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="hcallf" tags="" position="680,1292" size="100,100">&lt;div class=&quot;move&quot;&gt;[[All of you go|bungimg1]] to the bunglow&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[You go alone|bungimg2]] to the bunglow&lt;/div&gt;
 &lt;&lt;audio weird_noise stop&gt;&gt;
-</tw-passagedata><tw-passagedata pid="60" name="hiding image1" tags="" position="302,1018" size="100,100">&lt;&lt;if $hwait == 3&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Wait|hiding image1]]&lt;/div&gt;&lt;&lt;remember $hwait -=1&gt;&gt;&lt;&lt;elseif $hwait == 2&gt;&gt;&lt;div class=&quot;para&quot;&gt;The seeker is nearby.Keep an eye on him&lt;/div&gt;&lt;img src=&quot;images/hide.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;&lt;div class=&quot;move&quot;&gt;[[Wait|hiding image1]]&lt;/div&gt;&lt;&lt;remember $hwait -=1&gt;&gt;&lt;&lt;elseif $hwait== 1&gt;&gt;&lt;div class=&quot;para&quot;&gt;The seeker is nearby.Keep an eye on him. You are becoming impatient.&lt;/div&gt;&lt;img src=&quot;images/hide.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;&lt;div class=&quot;move&quot;&gt;[[Wait|hiding image1]]&lt;/div&gt;&lt;&lt;remember $hwait -=1&gt;&gt;&lt;&lt;else&gt;&gt;&lt;div class=&quot;para&quot;&gt;The seeker has turned away. You are safe&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Continue|hnoise2]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="61" name="hplace" tags="" position="698,1072" size="100,100">&lt;div class=&quot;para&quot;&gt;Your only other option is the nearby bunglow.
+</tw-passagedata><tw-passagedata pid="59" name="hiding image1" tags="" position="302,1018" size="100,100">&lt;&lt;if $hwait == 3&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Wait|hiding image1]]&lt;/div&gt;&lt;&lt;remember $hwait -=1&gt;&gt;&lt;&lt;elseif $hwait == 2&gt;&gt;&lt;div class=&quot;para&quot;&gt;The seeker is nearby.Keep an eye on him&lt;/div&gt;&lt;img src=&quot;images/hide.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;&lt;div class=&quot;move&quot;&gt;[[Wait|hiding image1]]&lt;/div&gt;&lt;&lt;remember $hwait -=1&gt;&gt;&lt;&lt;elseif $hwait== 1&gt;&gt;&lt;div class=&quot;para&quot;&gt;The seeker is nearby.Keep an eye on him. You are becoming impatient.&lt;/div&gt;&lt;img src=&quot;images/hide.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;&lt;div class=&quot;move&quot;&gt;[[Wait|hiding image1]]&lt;/div&gt;&lt;&lt;remember $hwait -=1&gt;&gt;&lt;&lt;else&gt;&gt;&lt;div class=&quot;para&quot;&gt;The seeker has turned away. You are safe&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Continue|hnoise2]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="60" name="hplace" tags="" position="698,1072" size="100,100">&lt;div class=&quot;para&quot;&gt;Your only other option is the nearby bunglow.
 What will you do?&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Go near the bunglow|hnoise3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="hnoise2" tags="" position="553,1067" size="100,100">&lt;&lt;audio weird_noise volume 3 play&gt;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Go near the bunglow|hnoise3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="61" name="hnoise2" tags="" position="553,1067" size="100,100">&lt;&lt;audio weird_noise volume 3 play&gt;&gt;
 &lt;div class=&quot;head&quot;&gt;Huh!!, what&#39;s that!!&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;You hear faint noises from a nearby place.
 What will you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Follow the noise|bunglow image 2]] which leads to a bunglow&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Call your friends and tell them|hcallf]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="hnoise3" tags="" position="850,1144" size="100,100">&lt;&lt;audio weird_noise volume 3 play&gt;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Call your friends and tell them|hcallf]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="62" name="hnoise3" tags="" position="850,1144" size="100,100">&lt;&lt;audio weird_noise volume 3 play&gt;&gt;
 &lt;div class=&quot;head&quot;&gt;Huh!!, what&#39;s that!!&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;You hear faint noises from the bunglow.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Cotinue|bunglow image 2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="hnext1" tags="" position="512,1544" size="100,100">&lt;div class=&quot;para&quot;&gt;Since the noise is coming from the bunglow. Each of you take charge of one place and search.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|hsearch]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="hnext2" tags="" position="975,1591" size="100,100">&lt;div class=&quot;para&quot;&gt;Your friend&#39;s don&#39;t agree to come along. You go alone and search. You enter the bunglow as the noises are coming from inside.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Enter bunglow|hsearch]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="66" name="kitchen image" tags="" position="467,1808" size="100,100">&lt;img src=&quot;images/kitchen.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;&lt;div class=&quot;para&quot;&gt;You hear the noise directly above your head, from where you are standing in the kitchen. Where do you check?&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Cotinue|bunglow image 2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="63" name="hnext1" tags="" position="512,1544" size="100,100">&lt;div class=&quot;para&quot;&gt;Since the noise is coming from the bunglow. Each of you take charge of one place and search.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|hsearch]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="64" name="hnext2" tags="" position="975,1591" size="100,100">&lt;div class=&quot;para&quot;&gt;Your friend&#39;s don&#39;t agree to come along. You go alone and search. You enter the bunglow as the noises are coming from inside.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Enter bunglow|hsearch]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="65" name="kitchen image" tags="" position="467,1808" size="100,100">&lt;img src=&quot;images/kitchen.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;&lt;div class=&quot;para&quot;&gt;You hear the noise directly above your head, from where you are standing in the kitchen. Where do you check?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Check in the topself|hcabinet]] cabinets.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Search somewhere else|hsearch]] and check.&lt;/div&gt;
-&lt;&lt;set $kit1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="lock image2" tags="" position="1097,1790" size="100,100">&lt;div class=&quot;para&quot;&gt;The basement is locked.
+&lt;&lt;set $kit1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="66" name="lock image2" tags="" position="1097,1790" size="100,100">&lt;div class=&quot;para&quot;&gt;The basement is locked.
 What do you do?&lt;/div&gt;
 &lt;img src=&quot;images/lock.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Search somewhere else|hsearch]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[break the lock|brlock3]]&lt;/div&gt;
 &lt;&lt;set $base1 = true&gt;&gt;
-&lt;&lt;set $hbrlock = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="3doors image" tags="" position="763,2337" size="100,100">&lt;div class=&quot;para&quot;&gt;There are three rooms.Which room do you search?&lt;/div&gt;
+&lt;&lt;set $hbrlock = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="67" name="3doors image" tags="" position="763,2337" size="100,100">&lt;div class=&quot;para&quot;&gt;There are three rooms.Which room do you search?&lt;/div&gt;
 &lt;img src=&quot;images/3doors.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
-&lt;&lt;if $hr1 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Room1|room1]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $hr2 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Room2|room2]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Room3|room3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="hcabinet" tags="" position="685,1909" size="100,100">&lt;div class=&quot;para&quot;&gt;It&#39;s to high for you to reach.
+&lt;&lt;if $hr1 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Room1|room1]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $hr2 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Room2|room2]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Room3|room3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="68" name="hcabinet" tags="" position="685,1909" size="100,100">&lt;div class=&quot;para&quot;&gt;It&#39;s to high for you to reach.
 What do you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Search for ladder|hladder]] cabinets.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Climb on other shelves and try to reach|hshelves]] cabinets.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="hladder" tags="" position="870,2018" size="100,100">&lt;div class=&quot;para&quot;&gt;After finding the ladder. You climb it and find the topshelf empty.&lt;/div&gt;&lt;div class=&quot;head&quot;&gt;But Wait!!&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;The sound is getting louder.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Check somewhere else|hsearch]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="71" name="hshelves" tags="" position="450,2125" size="100,100">&lt;div class=&quot;para&quot;&gt;You find it very hard to climb. While trying, you loose grip &amp; fall down.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Climb on other shelves and try to reach|hshelves]] cabinets.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="69" name="hladder" tags="" position="870,2018" size="100,100">&lt;div class=&quot;para&quot;&gt;After finding the ladder. You climb it and find the topshelf empty.&lt;/div&gt;&lt;div class=&quot;head&quot;&gt;But Wait!!&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;The sound is getting louder.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Check somewhere else|hsearch]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="70" name="hshelves" tags="" position="450,2125" size="100,100">&lt;div class=&quot;para&quot;&gt;You find it very hard to climb. While trying, you loose grip &amp; fall down.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Better search somewhere else|hsearch]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[You better find a ladder|hladder]]&lt;/div&gt;
-&lt;&lt;set $kit1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="brlock3" tags="" position="1156,1953" size="100,100">&lt;&lt;if $hbrlock !=0&gt;&gt;&lt;div class=&quot;para&quot;&gt;The lock won&#39;t break&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Try again|brlock3]]&lt;/div&gt;&lt;&lt;remember $hbrlock -=1&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;audio door_open play&gt;&gt;&lt;div class=&quot;head2&quot;&gt;The lock broke&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Go in|basement image]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="73" name="basement image" tags="" position="1036,2107" size="100,100">&lt;div class=&quot;head&quot;&gt;It&#39;s scary inside&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s dark and creepy. Do you want to search inside?&lt;/div&gt;
+&lt;&lt;set $kit1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="brlock3" tags="" position="1156,1953" size="100,100">&lt;&lt;if $hbrlock !=0&gt;&gt;&lt;div class=&quot;para&quot;&gt;The lock won&#39;t break&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Try again|brlock3]]&lt;/div&gt;&lt;&lt;remember $hbrlock -=1&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;audio door_open play&gt;&gt;&lt;div class=&quot;head2&quot;&gt;The lock broke&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Go in|basement image]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="72" name="basement image" tags="" position="1036,2107" size="100,100">&lt;div class=&quot;head&quot;&gt;It&#39;s scary inside&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s dark and creepy. Do you want to search inside?&lt;/div&gt;
 &lt;img src=&quot;images/basement.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Search somewhere else|hsearch]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Yes, i&#39;ll go ahead|hbasement2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="hbasement2" tags="" position="702,2187" size="100,100">&lt;div class=&quot;para&quot;&gt;The sound has almost become inaudiable. It&#39;s nowhere nearby.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[So go and search somewhere else|hsearch]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="75" name="room1" tags="" position="453,2407" size="100,100">&lt;&lt;audio door_open play&gt;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Yes, i&#39;ll go ahead|hbasement2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="73" name="hbasement2" tags="" position="702,2187" size="100,100">&lt;div class=&quot;para&quot;&gt;The sound has almost become inaudiable. It&#39;s nowhere nearby.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[So go and search somewhere else|hsearch]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="74" name="room1" tags="" position="453,2407" size="100,100">&lt;&lt;audio door_open play&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;It&#39;s pitch black inside. You find it difficult to see anything. What do you do?&lt;/div&gt;
 &lt;&lt;if $hstore == false&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Open the window|window]]&lt;/div&gt;
@@ -498,7 +573,7 @@ What do you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Use the torch|window]] you got from the storeroom.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Open the window|window]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;set $hr1 = true&gt;&gt;
-&lt;&lt;set $hwin = false&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="room2" tags="" position="801,2484" size="100,100">&lt;&lt;audio door_open play&gt;&gt;
+&lt;&lt;set $hwin = false&gt;&gt;</tw-passagedata><tw-passagedata pid="75" name="room2" tags="" position="801,2484" size="100,100">&lt;&lt;audio door_open play&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;It&#39;s pitch black inside. You find it difficult to see anything. What do you do?&lt;/div&gt;
 &lt;&lt;if $hstore == false&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Open the window|window]]&lt;/div&gt;
@@ -506,7 +581,7 @@ What do you do?&lt;/div&gt;
 &lt;&lt;else&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Use the torch|window]] you got from the storeroom.&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Open the window|window]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;set $hr2 = true&gt;&gt;
-&lt;&lt;set $hwin = false&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="room3" tags="" position="1191,2499" size="100,100">&lt;&lt;audio door_open play&gt;&gt;
+&lt;&lt;set $hwin = false&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="room3" tags="" position="1191,2499" size="100,100">&lt;&lt;audio door_open play&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;It&#39;s pitch black inside. You find it difficult to see anything. What do you do?&lt;/div&gt;
 &lt;&lt;if $hstore == false&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Open the window|window]]&lt;/div&gt;
@@ -514,22 +589,22 @@ What do you do?&lt;/div&gt;
 &lt;&lt;else&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Use the torch|window]] you got from the storeroom.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Open the window|window]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;set $hwin = true&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="window" tags="" position="452,2697" size="100,100">&lt;&lt;if $hwin == false&gt;&gt;&lt;div class=&quot;para&quot;&gt;The room is empty. There is nothing inside. So, the noise must be coming from the other rooms.&lt;/div&gt;
+&lt;&lt;set $hwin = true&gt;&gt;</tw-passagedata><tw-passagedata pid="77" name="window" tags="" position="452,2697" size="100,100">&lt;&lt;if $hwin == false&gt;&gt;&lt;div class=&quot;para&quot;&gt;The room is empty. There is nothing inside. So, the noise must be coming from the other rooms.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Go search in other rooms|3doors image]]&lt;/div&gt;
-&lt;&lt;else&gt;&gt;&lt;div class=&quot;para&quot;&gt;So this is where the weird squealing noise was coming from. It&#39;s a cat struck in an animal trap. While trying to escape, it hurt itslef even more. So it was whimpering.&lt;/div&gt;
+&lt;&lt;else&gt;&gt;&lt;div class=&quot;para&quot;&gt;So this is where the weird squealing noise was coming from. It&#39;s a cat struck in an animal trap. While trying to escape, it hurt itself even more. So it was whimpering.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Be a hero and rescue the cat|pimage]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Nah, i hate cats|hwait2]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="storeroom" tags="" position="812,2666" size="100,100">&lt;div class=&quot;para&quot;&gt;You get a torch from the storeroom and enter the dark room.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Nah, i hate cats|hwait2]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="78" name="storeroom" tags="" position="812,2666" size="100,100">&lt;div class=&quot;para&quot;&gt;You get a torch from the storeroom and enter the dark room.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[continue|window]]&lt;/div&gt;
-&lt;&lt;set $hstore = true&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="Rescue" tags="" position="929,2814" size="100,100">&lt;div class=&quot;head&quot;&gt;Be careful!&lt;/div&gt;
+&lt;&lt;set $hstore = true&gt;&gt;</tw-passagedata><tw-passagedata pid="79" name="Rescue" tags="" position="887.3333333333334,2804" size="100,100">&lt;div class=&quot;head&quot;&gt;Be careful!&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;The floor isn&#39;t sturdy. Watch your step.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Nah, it&#39;ll be fine|rimage]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Yes, i&#39;ll watch my step|hstep]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="hfall" tags="" position="733,2922" size="100,100">&lt;div class=&quot;head&quot;&gt;Oh, No!!, you fell.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Yes, i&#39;ll watch my step|hstep]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="80" name="hfall" tags="" position="733,2922" size="100,100">&lt;div class=&quot;head&quot;&gt;Oh, No!!, you fell.&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;You took a wrong step and you fell into the room below. Thankfully there were a huge bush which acted as a cushion and your not hurt. The room is dark, what will you do?&lt;/div&gt;
 &lt;&lt;if $hstore == true&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Use the torch from before|hwin]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Search and open the window.|hwin]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Use mobile torch|hwin2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="hstep" tags="" position="1161,2914" size="100,100">&lt;div class=&quot;para&quot;&gt;You reach to the cat and help it escape. The cat is hurt. What will you do?&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Use mobile torch|hwin2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="81" name="hstep" tags="" position="1109.3333333333333,2895.6666666666665" size="100,100">&lt;div class=&quot;para&quot;&gt;You reach to the cat and help it escape. The cat is hurt. What will you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Leave it there|htime1]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Take it with you|hcat]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="htime1" tags="" position="1111,2670" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;Wrong move! As a penalty wait for 1 min&lt;/p&gt;
+&lt;div class=&quot;move&quot;&gt;[[Take it with you|hcat]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="82" name="htime1" tags="" position="1111,2670" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;Wrong move! As a penalty wait for 1 min&lt;/p&gt;
 		&lt;span class=&quot;para&quot; id=&quot;timer&quot;&gt;&lt;/span&gt;
 		&lt;&lt;script&gt;&gt;
 		var seconds = 60;
@@ -545,16 +620,16 @@ What do you do?&lt;/div&gt;
 	&lt;&lt;/script&gt;&gt;
 	&lt;/div&gt;
 	&lt;&lt;timed 60s t8n&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Make better decision|hstep]]&lt;/div&gt;
-	&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="84" name="hcat" tags="" position="1050,3113" size="100,100">&lt;div class=&quot;para&quot;&gt;You take the cat along with you. As you a moving towards the door. You hear a crack. You notice that you are about to fall, you threw the cat to save it.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|rimage]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="hwin" tags="" position="496,3111" size="100,100">&lt;div class=&quot;para&quot;&gt;You findout that the door is locked. You try to think of a way out, but sadly there is nothing in the room that you can use to escape. Your eyes fall on the bush.&lt;/div&gt;
+	&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="83" name="hcat" tags="" position="1050,3113" size="100,100">&lt;div class=&quot;para&quot;&gt;You take the cat along with you. As you are moving towards the door, you hear a crack. You notice that you are about to fall, you throw the cat to save it.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|rimage]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="hwin" tags="" position="496,3111" size="100,100">&lt;div class=&quot;para&quot;&gt;You findout that the door is locked. You try to think of a way out, but sadly there is nothing in the room that you can use to escape. Your eyes fall on the bush.&lt;/div&gt;
 &lt;div class=&quot;head&quot;&gt;Its knotweed. You must have sniffed it&#39;s leaves when you fell.&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;You begin panicing.
 What will you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Cry for help|hhelp]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Try dailing you friends|cimage]]&lt;/div&gt;
-&lt;&lt;set $hcall = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="86" name="hwin2" tags="" position="856,3130" size="100,100">&lt;div class=&quot;para&quot;&gt;You might lose charge if you use it. Better save it for
+&lt;&lt;set $hcall = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="85" name="hwin2" tags="" position="856,3130" size="100,100">&lt;div class=&quot;para&quot;&gt;You might lose charge if you use it. Better save it for
 an emergency and search for a window.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Search and open the window.|hwin]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="hwait2" tags="" position="211,2668" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;Wrong move! As a penalty wait for 1 min&lt;/p&gt;
+&lt;div class=&quot;move&quot;&gt;[[Search and open the window.|hwin]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="hwait2" tags="" position="211,2668" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;Wrong move! As a penalty wait for 1 min&lt;/p&gt;
 		&lt;span class=&quot;para&quot; id=&quot;timer&quot;&gt;&lt;/span&gt;
 		&lt;&lt;script&gt;&gt;
 		var seconds = 60;
@@ -570,9 +645,9 @@ an emergency and search for a window.&lt;/div&gt;
 	&lt;&lt;/script&gt;&gt;
 	&lt;/div&gt;
 	&lt;&lt;timed 60s t8n&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Make better decision|window]]&lt;/div&gt;
-	&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="88" name="hhelp" tags="" position="350,3231" size="100,100">&lt;div class=&quot;para&quot;&gt;You try shouting. Again and again. But no one is near by. So better call your friends.&lt;/div&gt;
+	&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="hhelp" tags="" position="350,3231" size="100,100">&lt;div class=&quot;para&quot;&gt;You try shouting. Again and again. But no one is near by. So better call your friends.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|cimage]]&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="89" name="hfcall" tags="" position="736,4158" size="100,100">&lt;div class=&quot;head2&quot;&gt;Whom will you call?&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="88" name="hfcall" tags="" position="736,4158" size="100,100">&lt;div class=&quot;head2&quot;&gt;Whom will you call?&lt;/div&gt;
 &lt;&lt;if $frnd==1&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Joey|hcall1]] [[Veronica|hcall1]] [[Jughead|hcall1]] [[Tony|hcall1]] [[Betty|hcall1]]&lt;/div&gt;
 &lt;&lt;elseif $frnd==2&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|hcall1]] [[Veronica|hcall1]] [[Jughead|hcall1]] [[Tony|hcall1]] [[Betty|hcall1]]&lt;/div&gt;
 &lt;&lt;elseif $frnd==3&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|hcall1]] [[Joey|hcall1]] [[Jughead|hcall1]] [[Tony|hcall1]] [[Betty|hcall1]]&lt;/div&gt;
@@ -580,64 +655,64 @@ an emergency and search for a window.&lt;/div&gt;
 &lt;&lt;elseif $frnd==5&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|hcall1]] [[Joey|hcall1]] [[Veronica|hcall1]] [[Jughead|hcall1]] [[Betty|hcall1]]&lt;/div&gt;
 &lt;&lt;else&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|hcall1]] [[Joey|hcall1]] [[Veronica|hcall1]] [[Jughead|hcall1]] [[Tony|hcall1]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="hcall1" tags="" position="223,4219" size="100,100">&lt;&lt;if $hcall &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $hcall = $hcall -1&gt;&gt;
+&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="hcall1" tags="" position="223,4219" size="100,100">&lt;&lt;if $hcall &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $hcall = $hcall -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|hfcall]]&lt;/div&gt;
 &lt;&lt;elseif $hcall == 1&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service. Also your mobile battery is very less.&lt;/div&gt;&lt;&lt;remember $hcall = $hcall -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|hfcall]]&lt;/div&gt;
 &lt;&lt;else&gt;&gt;&lt;div class=&quot;para&quot;&gt;&lt;&lt;audio caller_tune volume 2 play&gt;&gt;It&#39;s connected, you can hear their callertune&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|hnext3]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="91" name="hnext3" tags="" position="611,4312" size="100,100">&lt;div class=&quot;para&quot;&gt;The call is connected. You explain the situation you are in to your friends. They assure you that they will come get you.
+</tw-passagedata><tw-passagedata pid="90" name="hnext3" tags="" position="611,4312" size="100,100">&lt;div class=&quot;para&quot;&gt;The call is connected. You explain the situation you are in to your friends. They assure you that they will come get you.
 So you wait for them to come and save you.&lt;/div&gt;
 &lt;div class=&quot;head&quot;&gt;[[Continue|hfsave]]&lt;/div&gt;
-&lt;&lt;audio caller_tune stop&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="password image" tags="" position="64,3611" size="100,100">&lt;div class=&quot;para&quot;&gt;You take your phone out. But its locked.&lt;/div&gt;
+&lt;&lt;audio caller_tune stop&gt;&gt;</tw-passagedata><tw-passagedata pid="91" name="password image" tags="" position="64,3611" size="100,100">&lt;div class=&quot;para&quot;&gt;You take your phone out. But its locked.&lt;/div&gt;
 &lt;img src=&quot;images/password.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;para&quot;&gt;You try to unlock it.&lt;/div&gt;
 &lt;div class=&quot;head&quot;&gt;Wrong password!!&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;[[Continue|hforgot]]&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="93" name="island image" tags="" position="1249,790" size="100,100">&lt;div class=&quot;para&quot;&gt;A gang of friends go on a trip to an abandoned island &quot;Yasnapolyana&quot;.&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="92" name="island image" tags="" position="1249,790" size="100,100">&lt;div class=&quot;para&quot;&gt;A gang of friends go on a trip to an abandoned island &quot;Yasnapolyana&quot;.&lt;/div&gt;
 &lt;img src=&quot;images/island.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;para&quot;&gt;It&#39;s a beautiful island and was once highly populated. But shortly after the overgrowth of &quot;knotweed&quot; everywhere, a plant which causes paranoia, panic attacks and short term memory loss even if you just sniff it&#39;s leaf. Everyone abandoned the island because of this.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|hide and seek]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="94" name="bunglow image 2" tags="" position="982,912" size="100,100">&lt;img src=&quot;images/bunglow.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|hide and seek]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="93" name="bunglow image 2" tags="" position="982,912" size="100,100">&lt;img src=&quot;images/bunglow.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;The bunglow looks pretty scary!!&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|hbunglow]]&lt;/div&gt;
-&lt;&lt;audio weird_noise stop&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="6image" tags="" position="1562,1947" size="100,100">&lt;img src=&quot;images/6.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;&lt;audio weird_noise stop&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="6image" tags="" position="1562,1947" size="100,100">&lt;img src=&quot;images/6.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;Take a screenshot&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|fall]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="96" name="7image" tags="" position="1951,3422" size="100,100">&lt;img src=&quot;images/7.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|fall]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="95" name="7image" tags="" position="1951,3422" size="100,100">&lt;img src=&quot;images/7.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;Take a screenshot&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|escape3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="97" name="8image" tags="" position="1540,2857" size="100,100">&lt;img src=&quot;images/8.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|escape3]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="96" name="8image" tags="" position="1540,2857" size="100,100">&lt;img src=&quot;images/8.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;Take a screenshot&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|next2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="98" name="cimage" tags="" position="815,3329" size="100,100">&lt;img src=&quot;images/c.png&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|next2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="97" name="cimage" tags="" position="815,3329" size="100,100">&lt;img src=&quot;images/c.png&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;Take a screenshot&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|password image]]&lt;/div&gt;
-&lt;&lt;set $story1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="99" name="iimage" tags="" position="1009,698" size="100,100">&lt;img src=&quot;images/i.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;&lt;set $story1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="98" name="iimage" tags="" position="1009,698" size="100,100">&lt;img src=&quot;images/i.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;Take a screenshot&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|hide]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="100" name="pimage" tags="" position="221,2832" size="100,100">&lt;img src=&quot;images/p.png&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|hide]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="pimage" tags="" position="221,2832" size="100,100">&lt;img src=&quot;images/p.png&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;Take a screenshot&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|Rescue]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="101" name="himage" tags="" position="280,2180" size="100,100">&lt;img src=&quot;images/h.png&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|Rescue]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="100" name="himage" tags="" position="280,2180" size="100,100">&lt;img src=&quot;images/h.png&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;Take a screenshot&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|3doors image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="102" name="eimage" tags="" position="718,243" size="100,100">&lt;div class=&quot;head2&quot;&gt;Something like this will be asked.&lt;/div&gt;&lt;img src=&quot;images/p.png&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;&lt;div class=&quot;head2&quot;&gt;Take a screenshot&lt;/div&gt;&lt;&lt;if $story1 == false&gt;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|3doors image]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="101" name="eimage" tags="" position="716.3333333333334,243" size="100,100">&lt;div class=&quot;head2&quot;&gt;Something like this will be asked.&lt;/div&gt;&lt;img src=&quot;images/p.png&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;&lt;div class=&quot;head2&quot;&gt;Take a screenshot&lt;/div&gt;&lt;&lt;if $story1 == false&gt;&gt;
 &lt;div id=&quot;para&quot;&gt;Hope that clears your doubt. Or do you want to read the instructions again.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Instructions|instructions]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|character]]&lt;/div&gt;&lt;&lt;else&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Go to the puzzle|hpuzzle]]&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="rimage" tags="" position="223,3028" size="100,100">&lt;img src=&quot;images/r.png&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="rimage" tags="" position="223,3028" size="100,100">&lt;img src=&quot;images/r.png&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;Take a screenshot&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|hfall]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="104" name="hforgot" tags="" position="880,3563" size="100,100">&lt;div class=&quot;para&quot;&gt;The effects of knotweed are visible. You have forgotten your passward.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|hfall]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="103" name="hforgot" tags="" position="880,3563" size="100,100">&lt;div class=&quot;para&quot;&gt;The effects of knotweed are visible. You have forgotten your passward.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|hpuzzle]]&lt;/div&gt;
 &lt;&lt;set $hhint1 = false&gt;&gt;
 &lt;&lt;set $hhint2 = false&gt;&gt;
-&lt;&lt;set $hhint3 = false&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="hpuzzle" tags="" position="440,3619" size="100,100">&lt;div class=&quot;para&quot;&gt;Your password is a 6 lettered word. The pictures you took earlier were actually letters of your password in a jumbled order. Try recalling them and enter the password&lt;/div&gt;
+&lt;&lt;set $hhint3 = false&gt;&gt;</tw-passagedata><tw-passagedata pid="104" name="hpuzzle" tags="" position="440,3619" size="100,100">&lt;div class=&quot;para&quot;&gt;Your password is a 6 lettered word. The pictures you took earlier were actually letters of your password in a jumbled order. Try recalling them and enter the password&lt;/div&gt;
 &lt;&lt;textbox &quot;$hq1ans&quot; &quot;&quot;&gt;&gt; &lt;&lt;button [[Submit|hv1]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;if you use the hints. You will be made to wait as compensation.&lt;/div&gt;
 &lt;&lt;if $hhint1 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[hint1 - 1 min wait|hhint1]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $hhint2 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[hint2 - 2 min wait|hhint2]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $hhint3 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[hint3 - 10 min wait|hhint3]]&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="hv1" tags="" position="85,3828" size="100,100">&lt;&lt;if $hq1ans == &quot;CIPHER&quot;&gt;&gt;&lt;div class=&quot;head2&quot;&gt;luckily you recalled your password &quot;CIPHER&quot; in time.&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="hv1" tags="" position="85,3828" size="100,100">&lt;&lt;if $hq1ans == &quot;CIPHER&quot;&gt;&gt;&lt;div class=&quot;head2&quot;&gt;luckily you recalled your password &quot;CIPHER&quot; in time.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[You start calling your friends.|hfcall]].&lt;/div&gt;
 &lt;&lt;else&gt;&gt;&lt;div class=&quot;head2&quot;&gt;Wrong password!&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Try again|hpuzzle]].&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $hcall = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="hhint1" tags="" position="149,3989" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 1 min, your hint will appear.&lt;/p&gt;
+&lt;&lt;set $hcall = 3&gt;&gt;</tw-passagedata><tw-passagedata pid="106" name="hhint1" tags="" position="149,3989" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 1 min, your hint will appear.&lt;/p&gt;
 		&lt;span class=&quot;para&quot; id=&quot;timer&quot;&gt;&lt;/span&gt;
 			&lt;&lt;timed 60s t8n&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;All letters are caps.&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Continue|hpuzzle]]&lt;/div&gt;
@@ -655,7 +730,7 @@ So you wait for them to come and save you.&lt;/div&gt;
 		}, 1000)	
 	&lt;&lt;/script&gt;&gt;
 	&lt;/div&gt;
-	&lt;&lt;set $hhint1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="hhint2" tags="" position="417,3989" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 2 min, your hint will appear.&lt;/p&gt;
+	&lt;&lt;set $hhint1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="107" name="hhint2" tags="" position="417,3989" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 2 min, your hint will appear.&lt;/p&gt;
 		&lt;span class=&quot;para&quot; id=&quot;timer&quot;&gt;&lt;/span&gt;
 			&lt;&lt;timed 120s t8n&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;First letter is C. If you dont have the 6th letter, use hint 3.&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Continue|hpuzzle]]&lt;/div&gt;
@@ -673,7 +748,7 @@ So you wait for them to come and save you.&lt;/div&gt;
 		}, 1000)	
 	&lt;&lt;/script&gt;&gt;
 	&lt;/div&gt;
-&lt;&lt;set $hhint2 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="hhint3" tags="" position="705,3968" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 10 mins, your hint will appear.&lt;/p&gt;
+&lt;&lt;set $hhint2 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="hhint3" tags="" position="705,3968" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 10 mins, your hint will appear.&lt;/p&gt;
 		&lt;span class=&quot;para&quot; id=&quot;timer&quot;&gt;&lt;/span&gt;
 			&lt;&lt;timed 600s t8n&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;The example was the 6th letter.If you don&#39;t have it.[[Click here|eimage]]&lt;/div&gt;
@@ -692,33 +767,35 @@ So you wait for them to come and save you.&lt;/div&gt;
 		}, 1000)	
 	&lt;&lt;/script&gt;&gt;
 	&lt;/div&gt;
-&lt;&lt;set $hhint3 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="hfsave" tags="" position="394,4409" size="100,100">&lt;div class=&quot;para&quot;&gt;Your are saved by you friends. You guys are leaving.&lt;/div&gt;
+&lt;&lt;set $hhint3 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="109" name="hfsave" tags="" position="394,4409" size="100,100">&lt;div class=&quot;para&quot;&gt;Your are saved by you friends. You guys are leaving.&lt;/div&gt;
 &lt;div class=&quot;head2&quot;&gt;Hey wait! what about the cat?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Go see the cat|hcat1]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Nah, i&#39;m done for the day|hend]]&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="111" name="hcat1" tags="" position="169,4633" size="100,100">&lt;div class=&quot;para&quot;&gt;You reach upstairs.&lt;/div&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;The cat isn&#39;t there. Hmm, may be it left.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 4s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;Wait!, what?1 the trap isn&#39;t there.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 6s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;Also the hole from which you fell isn&#39;t there.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 8s t8n&gt;&gt;&lt;div class=&quot;head&quot;&gt;SpOoKy!!!&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 9s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;[[You leave the place|hend2]]&lt;/div&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="112" name="hend" tags="" position="702,4583" size="100,100">&lt;div class=&quot;para&quot;&gt;C&#39;mon, you took all this trouble for that. Atleast go see if it&#39;s alright!&lt;/div&gt;
-&lt;div class=&quot;para&quot;&gt;[[Go see the cat|hcat1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="113" name="hend2" tags="" position="469,4788" size="100,100">&lt;div class=&quot;para&quot;&gt;Week&#39;s later you discover that because of knotweed, as it affected your memory. You ended up searching for the cat in the wrong room and got spooked for no reason.&lt;/div&gt;
-&lt;div class=&quot;head2&quot;&gt;[[Game End]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="114" name="Game End" tags="" position="842,4989" size="100,100">&lt;div class=&quot;head2&quot;&gt;You have finished the first round!!
-Congratulations.&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;Click on &quot;CLICK HERE&quot; before continuing to save your time.&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="110" name="hcat1" tags="" position="169,4633" size="100,100">&lt;div class=&quot;para&quot;&gt;You reach upstairs.&lt;/div&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;The cat isn&#39;t there. Hmm, may be it left.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 4s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;Wait!, what?1 the trap isn&#39;t there.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 6s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;Also the hole from which you fell isn&#39;t there.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;&lt;&lt;timed 8s t8n&gt;&gt;&lt;div class=&quot;head&quot;&gt;SpOoKy!!!&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 9s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;[[You leave the place|hend2]]&lt;/div&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="111" name="hend" tags="" position="702,4583" size="100,100">&lt;div class=&quot;para&quot;&gt;C&#39;mon, you took all this trouble for that. Atleast go see if it&#39;s alright!&lt;/div&gt;
+&lt;div class=&quot;para&quot;&gt;[[Go see the cat|hcat1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="112" name="hend2" tags="" position="467.3333333333333,4788" size="100,100">&lt;div class=&quot;para&quot;&gt;You are going to the mainland in a boat, you realise that because of knotweed, as it affected your memory. You ended up searching for the cat in the wrong room and got spooked for no reason.
 
-&lt;a href=&quot;https://forms.gle/md2Z37HAarZhi8As7&quot; target=&quot;_blank&quot;&gt;&lt;div class=&quot;para&quot;&gt;CLICK HERE&lt;/div&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class=&quot;head2&quot;&gt;[[Continue|aliens]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="113" name="Game End" tags="" position="798.6666666666666,5105.666666666668" size="100,100">&lt;div class=&quot;head2&quot;&gt;You passout.&lt;/div&gt;
+&lt;div class=&quot;para&quot;&gt;Fill the form and continue.&lt;/div&gt;
+
+&lt;a href=&quot;https://forms.gle/gvegNkdemr5NRsgZ6&quot; target=&quot;_blank&quot;&gt;&lt;div class=&quot;para&quot;&gt;CLICK HERE&lt;/div&gt;&lt;/a&gt;
 
 
-&lt;&lt;timed 10s t8n&gt;&gt;&lt;a href=&quot;https://ucsp-quiz.herokuapp.com/&quot; target=&quot;_blank&quot;&gt;&lt;div class=&quot;para&quot;&gt;Proceed to the next round.&lt;/div&gt;&lt;/a&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="spuzzle" tags="" position="1635,4093" size="100,100">&lt;div class=&quot;para&quot;&gt;The pictures you took earlier is actually the digits of police number in a jumbled order. Try recalling it and call the police.&lt;/div&gt;
+&lt;&lt;timed 10s t8n&gt;&gt;&lt;a href=&quot;https://ucsp-quiz.herokuapp.com/&quot; target=&quot;_blank&quot;&gt;&lt;div class=&quot;para&quot;&gt;Continue the story.&lt;/div&gt;&lt;/a&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="spuzzle" tags="" position="1635,4093" size="100,100">&lt;div class=&quot;para&quot;&gt;The pictures you took earlier is actually the digits of police number in a jumbled order. Try recalling it and call the police.&lt;/div&gt;
 &lt;&lt;textbox &quot;$hq2ans&quot; &quot;&quot;&gt;&gt; &lt;&lt;button [[Submit|hv2]]&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;if $shint1 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[hint1 - 1 min wait|shint1]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $shint2 == false&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[hint2 - 5 min wait|shint2]]&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $shint3 == false&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[hint3 - 10 min wait|shint3]]&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="hv2" tags="" position="1306,4217" size="100,100">&lt;&lt;if $hq2ans == 879&gt;&gt;&lt;div class=&quot;head2&quot;&gt;luckily you recalled the police helpline number 879 in time.&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="hv2" tags="" position="1306,4217" size="100,100">&lt;&lt;if $hq2ans == 879&gt;&gt;&lt;div class=&quot;head2&quot;&gt;luckily you recalled the police helpline number 879 in time.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call connects|spcall2]].&lt;/div&gt;
 &lt;&lt;else&gt;&gt;&lt;div class=&quot;head2&quot;&gt;The number you have dailed is invalid.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Try again|spuzzle]].&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="117" name="spcall" tags="" position="1626,4679" size="100,100">&lt;&lt;audio door_bang volume 5 play loop&gt;&gt;&lt;div class=&quot;para&quot;&gt;A policewomen picks it up and u begin explain everything to her. The man is still outside knocking the door and trying to enter the room.&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="spcall" tags="" position="1626,4679" size="100,100">&lt;&lt;audio door_bang volume 5 play loop&gt;&gt;&lt;div class=&quot;para&quot;&gt;A policewomen picks it up and u begin explain everything to her. The man is still outside knocking the door and trying to enter the room.&lt;/div&gt;
 &lt;div class=&quot;head2&quot;&gt;[[Coninue|sarrive]]&lt;/div&gt;
-&lt;&lt;audio caller_tune stop&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="shint1" tags="" position="1518,4308" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 1 min, your hint will appear.&lt;/p&gt;
+&lt;&lt;audio caller_tune stop&gt;&gt;</tw-passagedata><tw-passagedata pid="117" name="shint1" tags="" position="1518,4308" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 1 min, your hint will appear.&lt;/p&gt;
 		&lt;span class=&quot;para&quot; id=&quot;timer&quot;&gt;&lt;/span&gt;
 			&lt;&lt;timed 60s t8n&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;One of the numbers is misrepresented.&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Continue|spuzzle]]&lt;/div&gt;
@@ -736,7 +813,7 @@ Congratulations.&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;Click on &quot;CLI
 		}, 1000)	
 	&lt;&lt;/script&gt;&gt;
 	&lt;/div&gt;
-	&lt;&lt;set $shint1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="shint2" tags="" position="1741,4395" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 5 min, your hint will appear.&lt;/p&gt;
+	&lt;&lt;set $shint1 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="shint2" tags="" position="1741,4395" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 5 min, your hint will appear.&lt;/p&gt;
 		&lt;span class=&quot;para&quot; id=&quot;timer&quot;&gt;&lt;/span&gt;
 			&lt;&lt;timed 300s t8n&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;Try a different point of view to a particular number.&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Continue|spuzzle]]&lt;/div&gt;
@@ -754,7 +831,7 @@ Congratulations.&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;Click on &quot;CLI
 		}, 1000)	
 	&lt;&lt;/script&gt;&gt;
 	&lt;/div&gt;
-	&lt;&lt;set $shint2 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="120" name="shint3" tags="" position="1953,4277" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 10 min, your hint will appear.&lt;/p&gt;
+	&lt;&lt;set $shint2 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="119" name="shint3" tags="" position="1953,4277" size="100,100">&lt;div&gt;&lt;p id=&quot;warn_text&quot; class=&quot;para&quot;&gt;After 10 min, your hint will appear.&lt;/p&gt;
 		&lt;span class=&quot;para&quot; id=&quot;timer&quot;&gt;&lt;/span&gt;
 			&lt;&lt;timed 600s t8n&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;The number 6 is actually 9.&lt;/div&gt;&lt;div class=&quot;move&quot;&gt;[[Continue|spuzzle]]&lt;/div&gt;
@@ -772,29 +849,58 @@ Congratulations.&lt;/div&gt;&lt;div class=&quot;para&quot;&gt;Click on &quot;CLI
 		}, 1000)	
 	&lt;&lt;/script&gt;&gt;
 	&lt;/div&gt;
-	&lt;&lt;set $shint3 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="sarrive" tags="" position="1120,4730" size="100,100">&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;With in 1 hours you hear helicopter sounds from outside. Yes they are cops. They have come to rescue you.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;timed 10s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;Your unconsious friend is taken to the hospital and you are taken to the police for enquiry. The man is sent to a pyschiatric hospital for psychiatric evaluation.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
-&lt;div class=&quot;head2&quot;&gt;[[Game End]]&lt;/div&gt;
+	&lt;&lt;set $shint3 = true&gt;&gt;</tw-passagedata><tw-passagedata pid="120" name="sarrive" tags="" position="1118.3333333333333,4730" size="100,100">&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;With in 1 hours you hear helicopter sounds from outside. Yes they are cops. They have come to rescue you.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+&lt;&lt;timed 10s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;Your unconsious friend is taken to the hospital and the man is arrested. You and your friends are being transported to the mainland in the helicopter.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+&lt;div class=&quot;head2&quot;&gt;[[Conitnue|aliens]]&lt;/div&gt;
 &lt;&lt;audio door_bang stop&gt;&gt;
-</tw-passagedata><tw-passagedata pid="122" name="bungimg1" tags="" position="238,1220" size="100,100">&lt;img src=&quot;images/bunglow.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+</tw-passagedata><tw-passagedata pid="121" name="bungimg1" tags="" position="238,1220" size="100,100">&lt;img src=&quot;images/bunglow.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;The bunglow looks pretty scary!!&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|hnext1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="123" name="bungimg2" tags="" position="254,1470" size="100,100">&lt;img src=&quot;images/bunglow.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|hnext1]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="122" name="bungimg2" tags="" position="254,1470" size="100,100">&lt;img src=&quot;images/bunglow.jpg&quot; alt=&quot;image&quot; width=&quot;300px&quot; height=&quot;300px&quot;&gt;
 &lt;div class=&quot;head&quot;&gt;The bunglow looks pretty scary!!&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|hnext2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="124" name="StoryInit" tags="" position="468,256.6666666666667" size="100,100">&lt;&lt;cacheaudio &quot;door_bang&quot; &quot;music/doorbang.mp3&quot;&gt;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|hnext2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="123" name="StoryInit" tags="" position="466.3333333333333,256.6666666666667" size="100,100">&lt;&lt;cacheaudio &quot;door_bang&quot; &quot;music/doorbang.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;weird_noise&quot; &quot;music/weirdnoise.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;ringtone&quot; &quot;music/ringtone.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;door_open&quot; &quot;music/dooropen.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;not_reachable&quot; &quot;music/notreach.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;caller_tune&quot; &quot;music/friendcall.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="125" name="spcall2" tags="" position="1294.6666666666667,4477" size="100,100">&lt;&lt;audio caller_tune volume 2 play&gt;&gt;
+&lt;&lt;cacheaudio &quot;caller_tune&quot; &quot;music/friendcall.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="spcall2" tags="" position="1293,4477" size="100,100">&lt;&lt;audio caller_tune volume 2 play&gt;&gt;
 &lt;div class=&quot;para&quot;&gt;The call is connected. You can hear their caller tune.&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[Continue|spcall]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="126" name="hnoise1" tags="" position="800,848" size="100,100">&lt;&lt;audio weird_noise volume 3 play&gt;&gt;
+&lt;div class=&quot;move&quot;&gt;[[Continue|spcall]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="125" name="hnoise1" tags="" position="800,848" size="100,100">&lt;&lt;audio weird_noise volume 3 play&gt;&gt;
 &lt;div class=&quot;head&quot;&gt;Huh!!, what&#39;s that!!&lt;/div&gt;
 &lt;div class=&quot;para&quot;&gt;Some weid noise is coming from the bunglow.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Coninue|bunglow image 2]]&lt;/div&gt;
 
 
-</tw-passagedata><tw-passagedata pid="127" name="Starting" tags="" position="82.33333333333333,447.33333333333337" size="100,100">&lt;div id=&quot;c_o_l&quot;&gt;Chose Or Lose&lt;/div&gt;&lt;div id=&quot;tagline&quot; style=&quot;text-align: left;&quot;&gt;-Darr Ke Aage Jeet Hai&lt;/div&gt;
-&lt;div class=&quot;head2&quot; style=&quot;text-align: right;&quot;&gt;[[Start|Beginning]]&lt;/div&gt;</tw-passagedata></tw-storydata>
+</tw-passagedata><tw-passagedata pid="126" name="Starting" tags="" position="194,339.0000000000001" size="100,100">&lt;div id=&quot;c_o_l&quot;&gt;Chose Or Lose&lt;/div&gt;&lt;div id=&quot;para&quot; style=&quot;text-align: left;&quot;&gt;Choice is an illusion created between those with power and those without.&lt;/div&gt;&lt;div id=&quot;para&quot; style=&quot;text-align: right;&quot;&gt;-MEROVINGIAN, The Matrix Reloaded (2003)&lt;/div&gt;&lt;&lt;timed 4s t8n&gt;&gt;&lt;div class=&quot;c_o_l&quot;&gt;Hello there!!!&lt;/div&gt;&lt;div id=&quot;para&quot;&gt;Welcome to Chose or Lose.&lt;/div&gt;
+&lt;div class=&quot;slowfade inst&quot;&gt;[[Story Begin|Disclaimer]]&lt;/div&gt;&lt;&lt;/timed&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="aliens" tags="hello" position="786.6666666666669,4816.666666666666" size="100,100">@@.rumble;&lt;div class=&quot;head2&quot;&gt;What is happening! Why is everything shaking. What is this flashing light&lt;/div&gt;@@
+@@.rumble;&lt;div class=&quot;move&quot;&gt;[[Continue|Game End]]&lt;/div&gt;@@
+&lt;style&gt;
+  @-webkit-keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  @-moz-keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  @keyframes argh-my-eyes {
+    0%   { background-color: #fff; }
+    49% { background-color: #fff; }
+    50% { background-color: #000; }
+    99% { background-color: #000; }
+    100% { background-color: #fff; }
+  }
+  body {
+  -webkit-animation: argh-my-eyes 0.3s infinite;
+  -moz-animation:    argh-my-eyes 0.3s infinite;
+  animation:         argh-my-eyes 0.3s infinite;
+}
+&lt;/style&gt;</tw-passagedata><tw-passagedata pid="128" name="begining" tags="" position="456.6666666666668,485.6666666666667" size="100,100">&lt;div class=&quot;wrapper&quot; id=&quot;name&quot;&gt;[[LOCKDOWN SAGA|Starting]]&lt;/div&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&null!==n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",r="\\s"===e?"\\S":e.replace(/^\[/,"[^"),n="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",a=n.replace("\\-",""),i=function(){return"("+n+"+)\\(([^\\)\\|\\n]+)\\):|"+t+"*("+n+"+)"+t+"*:([^;\\|\\n]+);|"+t+"*((?:[#.]"+n+"+"+t+"*)+);"}();return Object.freeze({space:e,spaceNoTerminator:t,lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:r,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:n,anyLetterStrict:a,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",cssIdOrClassSigil:"[#.]",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:i,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),n=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),a=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),i=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),o=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:n,performance:a,touch:i,transitionEndEvent:o})}(),Visibility=function(){function e(){return a}function t(){return a&&document[a.stateProperty]||"visible"}function r(){return Boolean(a)}function n(){return Boolean(a&&document[a.hiddenProperty])}var a=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return undefined}();return Object.freeze(Object.defineProperties({},{vendor:{get:e},state:{get:t},isEnabled:{value:r},isHidden:{value:n},hiddenProperty:{value:a&&a.hiddenProperty},stateProperty:{value:a&&a.stateProperty},changeEvent:{value:a&&a.changeEvent}}))}(),Fullscreen=function(){function e(e){var t=e||document.documentElement;return t===document.documentElement&&("msRequestFullscreen"===f.requestFn||Browser.isOpera&&Browser.operaVersion<15)&&(t=document.body),t}function t(){return f}function r(){return(f||null)&&document[f.element]}function n(){return Boolean(f&&document[f.isEnabled])}function a(){return Boolean(f&&document[f.element])}function i(t,r){var n=this;if(!f)return Promise.reject(new Error("fullscreen not supported"));var i=e(r);if("function"!=typeof i[f.requestFn])return Promise.reject(new Error("fullscreen not supported"));if(a())return Promise.resolve();if(p())return i[f.requestFn](t);var o=".Fullscreen_requestFullscreen";return new Promise(function(e,r){jQuery(i).off(o).one(""+f.errorEvent+o+" "+f.changeEvent+o,function(t){jQuery(n).off(o),t.type===f.errorEvent?r(new Error("unknown fullscreen request error")):e()}),i[f.requestFn](t)})}function o(){var e=this;if(!f||"function"!=typeof document[f.exitFn])return Promise.reject(new TypeError("fullscreen not supported"));if(!a())return Promise.reject(new TypeError("fullscreen mode not active"));if(p())return document[f.exitFn]();var t=".Fullscreen_exitFullscreen";return new Promise(function(r,n){jQuery(document).off(t).one(""+f.errorEvent+t+" "+f.changeEvent+t,function(a){jQuery(e).off(t),a.type===f.errorEvent?n(new Error("unknown fullscreen exit error")):r()}),document[f.exitFn]()})}function s(e,t){return a()?o():i(e,t)}function u(t,r){if(f){var n=e(r);$(n).on(f.changeEvent,t)}}function l(t,r){if(f){var n=e(r);t?$(n).off(f.changeEvent,t):$(n).off(f.changeEvent)}}function c(t,r){if(f){var n=e(r);$(n).on(f.errorEvent,t)}}function d(t,r){if(f){var n=e(r);t?$(n).off(f.errorEvent,t):$(n).off(f.errorEvent)}}var f=function(){try{return Object.freeze([{isEnabled:"fullscreenEnabled",element:"fullscreenElement",requestFn:"requestFullscreen",exitFn:"exitFullscreen",changeEvent:"fullscreenchange",errorEvent:"fullscreenerror"},{isEnabled:"webkitFullscreenEnabled",element:"webkitFullscreenElement",requestFn:"webkitRequestFullscreen",exitFn:"webkitExitFullscreen",changeEvent:"webkitfullscreenchange",errorEvent:"webkitfullscreenerror"},{isEnabled:"mozFullScreenEnabled",element:"mozFullScreenElement",requestFn:"mozRequestFullScreen",exitFn:"mozCancelFullScreen",changeEvent:"mozfullscreenchange",errorEvent:"mozfullscreenerror"},{isEnabled:"msFullscreenEnabled",element:"msFullscreenElement",requestFn:"msRequestFullscreen",exitFn:"msExitFullscreen",changeEvent:"MSFullscreenChange",errorEvent:"MSFullscreenError"}].find(function(e){return e.isEnabled in document}))}catch(e){}return undefined}(),p=function(){function e(){if(null!==t)return t;if(t=!1,f)try{var e=document.exitFullscreen();e.catch(function(){}),t=e instanceof Promise}catch(e){}return t}var t=null;return e}();return Object.freeze(Object.defineProperties({},{vendor:{get:t},element:{get:r},isEnabled:{value:n},isFullscreen:{value:a},request:{value:i},exit:{value:o},toggle:{value:s},onChange:{value:u},offChange:{value:l},onError:{value:c},offError:{value:d}}))}(),_ref3=function(){function e(e){for(var t=e.cloneNode(!0),r=document.createDocumentFragment(),n=void 0;null!==(n=t.firstChild);){if(n.nodeType===Node.ELEMENT_NODE)switch(n.nodeName.toUpperCase()){case"BR":case"DIV":case"P":r.appendChild(document.createTextNode(" "))}r.appendChild(n)}return r.textContent}function t(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)return e;if(e instanceof String)return String(e);if(e instanceof Number)return Number(e);if(e instanceof Boolean)return Boolean(e);if("function"==typeof e.clone)return e.clone(!0);if(e.nodeType&&"function"==typeof e.cloneNode)return e.cloneNode(!0);var r=void 0;return e instanceof Array?r=new Array(e.length):e instanceof Date?r=new Date(e.getTime()):e instanceof Map?(r=new Map,e.forEach(function(e,n){return r.set(n,t(e))})):e instanceof RegExp?r=new RegExp(e):e instanceof Set?(r=new Set,e.forEach(function(e){return r.add(t(e))})):r=Object.create(Object.getPrototypeOf(e)),Object.keys(e).forEach(function(n){return r[n]=t(e[n])}),r}function r(e){
