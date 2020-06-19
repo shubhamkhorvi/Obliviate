@@ -457,8 +457,7 @@ What will you do?&lt;/div&gt;
 
 What will you do?&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[call your friends|call friend]]&lt;/div&gt;
-&lt;div class=&quot;move&quot;&gt;[[call police|call police]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="call police" tags="" position="2029,1148" size="100,100">&lt;&lt;audio not_reachable play&gt;&gt;
-&lt;div class=&quot;para&quot;&gt;You call the police and try to explain the situation, but you couldn&#39;t hear anything due to improper network.&lt;/div&gt;
+&lt;div class=&quot;move&quot;&gt;[[call police|call police]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="call police" tags="" position="2029,1148" size="100,100">&lt;div class=&quot;para&quot;&gt;You call the police and try to explain the situation, but you couldn&#39;t hear anything due to improper network.&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call your friends|callfriends2]]&lt;/div&gt;</tw-passagedata><tw-passagedata pid="15" name="call friend" tags="" position="1640,1135" size="100,100">&lt;div class=&quot;head2&quot;&gt;Whom will you call?&lt;/div&gt;
 &lt;&lt;if $frnd==1&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Joey|call1]] [[Veronica|call1]] [[Jughead|call1]] [[Tony|call1]] [[Betty|call1]]&lt;/div&gt;
 &lt;&lt;elseif $frnd==2&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call1]] [[Veronica|call1]] [[Jughead|call1]] [[Tony|call1]] [[Betty|call1]]&lt;/div&gt;
@@ -467,9 +466,9 @@ What will you do?&lt;/div&gt;
 &lt;&lt;elseif $frnd==5&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call1]] [[Joey|call1]] [[Veronica|call1]] [[Jughead|call1]] [[Betty|call1]]&lt;/div&gt;
 &lt;&lt;else&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call1]] [[Joey|call1]] [[Veronica|call1]] [[Jughead|call1]] [[Tony|call1]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="call1" tags="" position="1467,1243" size="100,100">&lt;&lt;if $call &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
+&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="call1" tags="" position="1467,1243" size="100,100">&lt;&lt;if $call &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 1s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|call friend]]&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;elseif $call == 1&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of sevice. Also, your mobile battery is very low.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
+&lt;&lt;elseif $call == 1&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 1s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of sevice. Also, your mobile battery is very low.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|call friend]]&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call police|call2]]&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;audio ringtone play&gt;&gt;&lt;&lt;timed 1s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;You hear your friend&#39;s mobile ringtone. You start running towards the sound. While you&#39;re running itself the sound stops.
@@ -504,9 +503,9 @@ What will you do?&lt;/div&gt;
 &lt;&lt;elseif $frnd==5&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call3]] [[Joey|call3]] [[Veronica|call3]] [[Jughead|call3]] [[Betty|call3]]&lt;/div&gt;
 &lt;&lt;else&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|call3]] [[Joey|call3]] [[Veronica|call3]] [[Jughead|call3]] [[Tony|call3]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="call3" tags="" position="2021,1463" size="100,100">&lt;&lt;if $call &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
+&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="call3" tags="" position="2021,1463" size="100,100">&lt;&lt;if $call &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 1s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|callfriends2]]&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;elseif $call == 1&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service. Also your mobile battery is very less.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
+&lt;&lt;elseif $call == 1&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 1s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service. Also your mobile battery is very less.&lt;/div&gt;&lt;&lt;remember $call = $call -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|callfriends2]]&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;audio ringtone play&gt;&gt;&lt;div class=&quot;para&quot;&gt;You hear your friend&#39;s mobile ringtone. You start running towards the sound. While you&#39;re running itself the sound stops.
 What will you do?&lt;/div&gt;
@@ -744,11 +743,11 @@ an emergency and search for a window.&lt;/div&gt;
 &lt;&lt;elseif $frnd==5&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|hcall1]] [[Joey|hcall1]] [[Veronica|hcall1]] [[Jughead|hcall1]] [[Betty|hcall1]]&lt;/div&gt;
 &lt;&lt;else&gt;&gt;&lt;div class=&quot;move&quot;&gt;[[Archie|hcall1]] [[Joey|hcall1]] [[Veronica|hcall1]] [[Jughead|hcall1]] [[Tony|hcall1]]&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="hcall1" tags="" position="223,4219" size="100,100">&lt;&lt;if $hcall &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $hcall = $hcall -1&gt;&gt;
+&lt;&lt;audio not_reachable stop&gt;&gt;</tw-passagedata><tw-passagedata pid="87" name="hcall1" tags="" position="223,4219" size="100,100">&lt;&lt;if $hcall &gt;= 2&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 1s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service.&lt;/div&gt;&lt;&lt;remember $hcall = $hcall -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|hfcall]]&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;elseif $hcall == 1&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service. Also your mobile battery is very low.&lt;/div&gt;&lt;&lt;remember $hcall = $hcall -1&gt;&gt;
+&lt;&lt;elseif $hcall == 1&gt;&gt;&lt;&lt;audio not_reachable play&gt;&gt;&lt;&lt;timed 1s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s out of service. Also your mobile battery is very low.&lt;/div&gt;&lt;&lt;remember $hcall = $hcall -1&gt;&gt;
 &lt;div class=&quot;move&quot;&gt;[[Call other friends|hfcall]]&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
-&lt;&lt;else&gt;&gt;&lt;&lt;audio caller_tune volume 2 play&gt;&gt;&lt;&lt;timed 2s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s connected, you can hear their callertune&lt;/div&gt;
+&lt;&lt;else&gt;&gt;&lt;&lt;audio caller_tune volume 2 play&gt;&gt;&lt;&lt;timed 1s t8n&gt;&gt;&lt;div class=&quot;para&quot;&gt;It&#39;s connected, you can hear their callertune&lt;/div&gt;
 &lt;div class=&quot;move&quot;&gt;[[Continue|hnext3]]&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="88" name="hnext3" tags="" position="611,4312" size="100,100">&lt;div class=&quot;para&quot;&gt;The call is connected. You explain the situation you are in to your friends. They assure you that they will come get you.
